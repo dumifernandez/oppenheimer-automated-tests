@@ -18,7 +18,7 @@ Verify that a bookkeeper can get a list of working class heros via the API
     ${response}=      GET On Session    ${GET_SESSION_NAME}    calculator/taxRelief    headers=${headers}
     Should Be Equal As Strings    ${response.status_code}    200
     Log Response Data To Console ${response}
-    # Cannot be performed this test case due API is not working. Hence tax amount not returns.
+    # Cannot be performed this test case due to API is not working. Hence tax amount not returns.
 
 
 # Verify that can able to GET endpoint which returns a list consist of natid, tax relief amount and name
