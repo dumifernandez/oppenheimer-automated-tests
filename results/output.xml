@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230425 00:39:23.421" rpa="false" schemaversion="3">
+<suite id="s1" name="Oppenheimer-Automated-Tests" source="C:\Users\Dumindu\OneDrive\Desktop\ROBOT Automation\oppenheimer-automated-tests\oppenheimer-automated-tests">
+<suite id="s1-s1" name="Tests" source="C:\Users\Dumindu\OneDrive\Desktop\ROBOT Automation\oppenheimer-automated-tests\oppenheimer-automated-tests\tests">
+<suite id="s1-s1-s1" name="US5  Dispense Tax Relief" source="C:\Users\Dumindu\OneDrive\Desktop\ROBOT Automation\oppenheimer-automated-tests\oppenheimer-automated-tests\tests\US5_ Dispense_Tax_Relief.robot">
+<test id="s1-s1-s1-t1" name="Verify that the Dispense Now button color shows in red color" line="11">
+<kw name="Open The Oppenheimer Project UI" library="Common" type="SETUP">
+<doc>Open The Oppenheimer Project UI</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230425 00:39:24.151" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20230425 00:39:24.149" endtime="20230425 00:39:28.955"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230425 00:39:28.956" endtime="20230425 00:39:29.087"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230425 00:39:29.088" endtime="20230425 00:39:29.094"/>
+</kw>
+<status status="PASS" starttime="20230425 00:39:24.146" endtime="20230425 00:39:29.095"/>
+</kw>
+<kw name="Dispense Now Button Color Should Be Red" library="HomePage">
+<kw name="Scroll To Dispense Now Button" library="HomePage">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${DISPENS_NOW_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230425 00:39:29.104" endtime="20230425 00:39:29.438"/>
+</kw>
+<status status="PASS" starttime="20230425 00:39:29.101" endtime="20230425 00:39:29.439"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${DISPENS_NOW_BUTTON_CSS}</var>
+<arg>${DISPENS_NOW_BUTTON}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230425 00:39:29.632" level="INFO">${DISPENS_NOW_BUTTON_CSS} = btn btn-danger btn-block</msg>
+<status status="PASS" starttime="20230425 00:39:29.440" endtime="20230425 00:39:29.633"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${DISPENS_NOW_BUTTON_CSS}</arg>
+<arg>btn-danger</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230425 00:39:29.635" endtime="20230425 00:39:29.637"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Button Color Validation Success!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230425 00:39:29.638" endtime="20230425 00:39:29.640"/>
+</kw>
+<status status="PASS" starttime="20230425 00:39:29.099" endtime="20230425 00:39:29.641"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230425 00:39:29.643" endtime="20230425 00:39:32.010"/>
+</kw>
+<doc>Validating the Dispense Now button color</doc>
+<tag>happy-path</tag>
+<status status="PASS" starttime="20230425 00:39:24.143" endtime="20230425 00:39:32.015"/>
+</test>
+<test id="s1-s1-s1-t2" name="Verify that the Dispense Now button text is exactly shows as Dispense Now”" line="18">
+<kw name="Open The Oppenheimer Project UI" library="Common" type="SETUP">
+<doc>Open The Oppenheimer Project UI</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230425 00:39:32.027" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20230425 00:39:32.025" endtime="20230425 00:39:34.391"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230425 00:39:34.392" endtime="20230425 00:39:34.545"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230425 00:39:34.547" endtime="20230425 00:39:34.552"/>
+</kw>
+<status status="PASS" starttime="20230425 00:39:32.023" endtime="20230425 00:39:34.553"/>
+</kw>
+<kw name="Dispense Now Button Text Should Be Dispense Now" library="HomePage">
+<kw name="Scroll To Dispense Now Button" library="HomePage">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${DISPENS_NOW_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230425 00:39:34.558" endtime="20230425 00:39:34.919"/>
+</kw>
+<status status="PASS" starttime="20230425 00:39:34.556" endtime="20230425 00:39:34.920"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DISPENS_NOW_BUTTON_TEXT}</var>
+<arg>${DISPENS_NOW_BUTTON}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230425 00:39:34.982" level="INFO">${DISPENS_NOW_BUTTON_TEXT} = Dispense Now</msg>
+<status status="PASS" starttime="20230425 00:39:34.920" endtime="20230425 00:39:34.982"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${DISPENS_NOW_BUTTON_TEXT}</arg>
+<arg>Dispense Now</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230425 00:39:34.983" endtime="20230425 00:39:34.985"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Button Text Validation Success!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230425 00:39:34.986" endtime="20230425 00:39:34.988"/>
+</kw>
+<status status="PASS" starttime="20230425 00:39:34.555" endtime="20230425 00:39:34.989"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230425 00:39:34.991" endtime="20230425 00:39:37.338"/>
+</kw>
+<doc>Validating the Dispense Now button text</doc>
+<tag>happy-path</tag>
+<status status="PASS" starttime="20230425 00:39:32.020" endtime="20230425 00:39:37.339"/>
+</test>
+<test id="s1-s1-s1-t3" name="Verify that after clicking on the Dispense Now button, it should direct to a page with a text that says “Cash dispensed”" line="25">
+<kw name="Open The Oppenheimer Project UI" library="Common" type="SETUP">
+<doc>Open The Oppenheimer Project UI</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230425 00:39:37.353" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20230425 00:39:37.352" endtime="20230425 00:39:39.903"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230425 00:39:39.904" endtime="20230425 00:39:40.070"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230425 00:39:40.071" endtime="20230425 00:39:40.075"/>
+</kw>
+<status status="PASS" starttime="20230425 00:39:37.350" endtime="20230425 00:39:40.076"/>
+</kw>
+<kw name="Click On The Dispense Now Button" library="HomePage">
+<kw name="Scroll To Dispense Now Button" library="HomePage">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${DISPENS_NOW_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230425 00:39:40.084" endtime="20230425 00:39:40.412"/>
+</kw>
+<status status="PASS" starttime="20230425 00:39:40.083" endtime="20230425 00:39:40.416"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DISPENS_NOW_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 00:39:40.419" level="INFO">Clicking element 'xpath=//a[@href='dispense']'.</msg>
+<status status="PASS" starttime="20230425 00:39:40.417" endtime="20230425 00:39:40.837"/>
+</kw>
+<status status="PASS" starttime="20230425 00:39:40.078" endtime="20230425 00:39:40.838"/>
+</kw>
+<kw name="Cash Dispensed Button Text Should Be Cash dispensed" library="HomePage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${CASH_DISPENSED_LABEL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230425 00:39:40.841" endtime="20230425 00:39:40.873"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${CASH_DISPENSED_BUTTON_TEXT}</var>
+<arg>${CASH_DISPENSED_LABEL}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230425 00:39:40.926" level="INFO">${CASH_DISPENSED_BUTTON_TEXT} = Cash dispensed</msg>
+<status status="PASS" starttime="20230425 00:39:40.874" endtime="20230425 00:39:40.927"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${CASH_DISPENSED_BUTTON_TEXT}</arg>
+<arg>Cash dispensed</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230425 00:39:40.928" endtime="20230425 00:39:40.931"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Directed to the Cash Dispensed Page Successfully!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230425 00:39:40.933" endtime="20230425 00:39:40.936"/>
+</kw>
+<status status="PASS" starttime="20230425 00:39:40.839" endtime="20230425 00:39:40.937"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230425 00:39:40.939" endtime="20230425 00:39:43.289"/>
+</kw>
+<doc>Validating the Dispense Now button click</doc>
+<tag>happy-path</tag>
+<status status="PASS" starttime="20230425 00:39:37.344" endtime="20230425 00:39:43.290"/>
+</test>
+<doc>US 5: As the Governor, I should be able to see a button on the screen so that I can dispense tax relief for my working class heroes</doc>
+<status status="PASS" starttime="20230425 00:39:23.537" endtime="20230425 00:39:43.295"/>
+</suite>
+<status status="PASS" starttime="20230425 00:39:23.533" endtime="20230425 00:39:43.306"/>
+</suite>
+<status status="PASS" starttime="20230425 00:39:23.433" endtime="20230425 00:39:43.315"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">happy-path</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Oppenheimer-Automated-Tests">Oppenheimer-Automated-Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Tests">Oppenheimer-Automated-Tests.Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="US5  Dispense Tax Relief">Oppenheimer-Automated-Tests.Tests.US5  Dispense Tax Relief</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
